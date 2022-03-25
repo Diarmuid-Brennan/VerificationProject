@@ -65,7 +65,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -75,7 +75,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -85,7 +85,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
 
@@ -113,7 +113,7 @@ class BrennanDiarmuidTestTask2 {
         reduc = new BigDecimal(num);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("10");
         assertEquals(cost, result);
@@ -125,7 +125,7 @@ class BrennanDiarmuidTestTask2 {
         reduc = new BigDecimal(num);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("13");
         assertEquals(cost, result);
@@ -137,7 +137,7 @@ class BrennanDiarmuidTestTask2 {
         reduc = new BigDecimal(num);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("22");
         assertEquals(cost, result);
@@ -182,7 +182,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -192,7 +192,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -201,7 +201,7 @@ class BrennanDiarmuidTestTask2 {
         norm = new BigDecimal(num);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);
@@ -213,7 +213,7 @@ class BrennanDiarmuidTestTask2 {
         norm = new BigDecimal(num);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("29");
         assertEquals(cost, result);
@@ -225,7 +225,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -235,7 +235,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -245,7 +245,7 @@ class BrennanDiarmuidTestTask2 {
         IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class, () ->
                 new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal ));
 
-        assertEquals("The normal rate cannot be less or equal to the reduced rate", exception.getMessage());
+        assertEquals("The normalRate has to be greater or equal to the reducedRate", exception.getMessage());
     }
 
     @Test
@@ -254,7 +254,7 @@ class BrennanDiarmuidTestTask2 {
         reduc = new BigDecimal(3);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("23");
         assertEquals(cost, result);
@@ -266,7 +266,7 @@ class BrennanDiarmuidTestTask2 {
         reduc = new BigDecimal(0);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("0");
         assertEquals(cost, result);
@@ -378,7 +378,7 @@ class BrennanDiarmuidTestTask2 {
 
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);
@@ -399,7 +399,7 @@ class BrennanDiarmuidTestTask2 {
 
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);
@@ -521,7 +521,7 @@ class BrennanDiarmuidTestTask2 {
 
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);
@@ -542,7 +542,7 @@ class BrennanDiarmuidTestTask2 {
 
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         Period period = new Period(6,12);
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);
@@ -639,7 +639,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreePeriod() throws Exception {
         Period period = new Period(0,7);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("0");
         assertEquals(cost, result);
@@ -649,7 +649,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreePeriod1() throws Exception {
         Period period = new Period(0,6);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("0");
         assertEquals(cost, result);
@@ -659,7 +659,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreePeriod2() throws Exception {
         Period period = new Period(0,1);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("0");
         assertEquals(cost, result);
@@ -669,7 +669,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalPeriod() throws Exception {
         Period period = new Period(7,8);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("5");
         assertEquals(cost, result);
@@ -679,7 +679,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalPeriod1() throws Exception {
         Period period = new Period(7,9);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
         BigDecimal result = new BigDecimal("10");
         assertEquals(cost, result);
     }
@@ -688,7 +688,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalPeriod2() throws Exception {
         Period period = new Period(16,20);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("20");
         assertEquals(cost, result);
@@ -698,7 +698,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedPeriod() throws Exception {
         Period period = new Period(9,16);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("21");
         assertEquals(cost, result);
@@ -708,7 +708,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedPeriod1() throws Exception {
         Period period = new Period(21,22);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("3");
         assertEquals(cost, result);
@@ -718,7 +718,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedPeriod2() throws Exception {
         Period period = new Period(9,11);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("6");
         assertEquals(cost, result);
@@ -728,7 +728,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreeToNormalPeriod() throws Exception {
         Period period = new Period(6,8);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("5");
         assertEquals(cost, result);
@@ -738,7 +738,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreeToNormalPeriod1() throws Exception {
         Period period = new Period(0,9);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("10");
         assertEquals(cost, result);
@@ -748,7 +748,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedToFreePeriod() throws Exception {
         Period period = new Period(20,24);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("12");
         assertEquals(cost, result);
@@ -758,7 +758,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedToFreePeriod1() throws Exception {
         Period period = new Period(21,23);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("6");
         assertEquals(cost, result);
@@ -768,7 +768,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalToReducedPeriod() throws Exception {
         Period period = new Period(7,10);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("13");
         assertEquals(cost, result);
@@ -778,7 +778,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalToReducedPeriod1() throws Exception {
         Period period = new Period(7,16);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("31");
         assertEquals(cost, result);
@@ -788,7 +788,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestNormalToReducedPeriod2() throws Exception {
         Period period = new Period(16,21);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("23");
         assertEquals(cost, result);
@@ -798,7 +798,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedToNormalPeriod() throws Exception {
         Period period = new Period(15,20);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("23");
         assertEquals(cost, result);
@@ -808,7 +808,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestReducedToNormalPeriod1() throws Exception {
         Period period = new Period(9,19);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("36");
         assertEquals(cost, result);
@@ -818,7 +818,7 @@ class BrennanDiarmuidTestTask2 {
     void CalculateTestFreeToNormalToReducedPeriod() throws Exception {
         Period period = new Period(6,12);
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
-        BigDecimal cost = rate.calculate(period);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
         BigDecimal result = new BigDecimal("19");
         assertEquals(cost, result);

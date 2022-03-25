@@ -10,6 +10,7 @@ public class Rate {
     private BigDecimal hourlyReducedRate;
     private ArrayList<Period> reduced = new ArrayList<>();
     private ArrayList<Period> normal = new ArrayList<>();
+    IReducedCalculate iReducedCalculate;
 
     public Rate(CarParkKind kind, BigDecimal normalRate, BigDecimal reducedRate, ArrayList<Period> reducedPeriods
             , ArrayList<Period> normalPeriods) {
@@ -88,11 +89,31 @@ public class Rate {
         }
         return isValid;
     }
-    public BigDecimal calculate(Period periodStay) {
+    public BigDecimal calculate(Period periodStay, CarParkKind carParkKind) {
         int normalRateHours = periodStay.occurences(normal);
         int reducedRateHours = periodStay.occurences(reduced);
-        return (this.hourlyNormalRate.multiply(BigDecimal.valueOf(normalRateHours))).add(
+        BigDecimal result =(this.hourlyNormalRate.multiply(BigDecimal.valueOf(normalRateHours))).add(
                 this.hourlyReducedRate.multiply(BigDecimal.valueOf(reducedRateHours)));
+
+        String type = carParkKind.toString();
+        switch (type) {
+            case "VISITOR":
+                iReducedCalculate = new VisitorReduction();
+                break;
+            case "MANAGEMENT":
+                iReducedCalculate = new ManagementReduction();
+                break;
+            case "STUDENT":
+                iReducedCalculate = new StudentReduction();
+                break;
+            case "STAFF":
+                iReducedCalculate = new StaffReduction();
+                break;
+            default:
+                throw new IllegalArgumentException("ERROR not found");
+        }
+        result = iReducedCalculate.calculateReduction(result);
+        return result;
     }
 
 }
