@@ -824,5 +824,163 @@ class BrennanDiarmuidTestTask2 {
         assertEquals(cost, result);
     }
 
+    @Test
+    public void CalculateTestCarParkKindManagement() throws Exception {
+        Rate rate =  new Rate(CarParkKind.MANAGEMENT, norm, reduc, reduced, normal );
+        Period period = new Period(0,3);
+        BigDecimal cost = rate.calculate(period, CarParkKind.MANAGEMENT);
 
+        BigDecimal result = new BigDecimal("19");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindManagement1() throws Exception {
+        Rate rate =  new Rate(CarParkKind.MANAGEMENT, norm, reduc, reduced, normal );
+        Period period = new Period(3,7);
+        BigDecimal cost = rate.calculate(period, CarParkKind.MANAGEMENT);
+
+        BigDecimal result = new BigDecimal("4");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindManagement2() throws Exception {
+        Rate rate =  new Rate(CarParkKind.MANAGEMENT, norm, reduc, reduced, normal );
+        Period period = new Period(9,10);
+        BigDecimal cost = rate.calculate(period, CarParkKind.MANAGEMENT);
+
+        BigDecimal result = new BigDecimal("4");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindManagement3() throws Exception {
+        Rate rate =  new Rate(CarParkKind.MANAGEMENT, norm, reduc, reduced, normal );
+        Period period = new Period(7,8);
+        BigDecimal cost = rate.calculate(period, CarParkKind.MANAGEMENT);
+
+        BigDecimal result = new BigDecimal("5");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindVisitor() throws Exception {
+        Rate rate =  new Rate(CarParkKind.VISITOR, norm, reduc, reduced, normal );
+        Period period = new Period(0,9);
+        BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
+
+        BigDecimal result = new BigDecimal("10");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindVisitor1() throws Exception {
+        Rate rate =  new Rate(CarParkKind.VISITOR, norm, reduc, reduced, normal );
+        Period period = new Period(0,10);
+        BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
+
+        BigDecimal result = new BigDecimal("0");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindVisitor2() throws Exception {
+        Rate rate =  new Rate(CarParkKind.VISITOR, norm, reduc, reduced, normal );
+        Period period = new Period(4,18);
+        BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
+
+        BigDecimal result = new BigDecimal("8");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindVisitor3() throws Exception {
+        Rate rate =  new Rate(CarParkKind.VISITOR, norm, reduc, reduced, normal );
+        Period period = new Period(12,24);
+        BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
+
+        BigDecimal result = new BigDecimal("3");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStudent() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STUDENT, norm, reduc, reduced, normal );
+        Period period = new Period(4,11);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
+
+        BigDecimal result = new BigDecimal("10");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStudent1() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STUDENT, norm, reduc, reduced, normal );
+        Period period = new Period(6,10);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
+
+        BigDecimal result = new BigDecimal("11.13");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStudent2() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STUDENT, norm, reduc, reduced, normal );
+        Period period = new Period(10,12);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
+
+        BigDecimal result = new BigDecimal("5.87");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStudent3() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STUDENT, norm, reduc, reduced, normal );
+        Period period = new Period(15,19);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
+
+        BigDecimal result = new BigDecimal("9.37");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStaff() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
+        Period period = new Period(0,9);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
+
+        BigDecimal result = new BigDecimal("16");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStaff1() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
+        Period period = new Period(7,9);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
+
+        BigDecimal result = new BigDecimal("10");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStaff2() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
+        Period period = new Period(7,17);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
+
+        BigDecimal result = new BigDecimal("16");
+        assertEquals(cost, result);
+    }
+
+    @Test
+    public void CalculateTestCarParkKindStaff3() throws Exception {
+        Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
+        Period period = new Period(7,22);
+        BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
+
+        BigDecimal result = new BigDecimal("16");
+        assertEquals(cost, result);
+    }
 }
