@@ -139,7 +139,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("22");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -203,7 +203,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -215,7 +215,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("29");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
     @Test
@@ -256,7 +256,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("23");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -380,7 +380,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -401,7 +401,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -523,7 +523,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -544,7 +544,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(6,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -690,7 +690,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("20");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -700,7 +700,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("21");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -780,7 +780,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("31");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -790,7 +790,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("23");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -800,7 +800,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("23");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -810,7 +810,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("36");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -820,7 +820,7 @@ class BrennanDiarmuidTestTask2 {
         Rate rate =  new Rate(CarParkKind.STAFF, norm, reduc, reduced, normal );
         BigDecimal cost = rate.calculate(period, CarParkKind.STAFF);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("16");
         assertEquals(cost, result);
     }
 
@@ -830,7 +830,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(0,3);
         BigDecimal cost = rate.calculate(period, CarParkKind.MANAGEMENT);
 
-        BigDecimal result = new BigDecimal("19");
+        BigDecimal result = new BigDecimal("0");
         assertEquals(cost, result);
     }
 
@@ -880,7 +880,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(0,10);
         BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
 
-        BigDecimal result = new BigDecimal("0");
+        BigDecimal result = new BigDecimal("1.50");
         assertEquals(cost, result);
     }
 
@@ -890,7 +890,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(4,18);
         BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
 
-        BigDecimal result = new BigDecimal("8");
+        BigDecimal result = new BigDecimal("15.50");
         assertEquals(cost, result);
     }
 
@@ -900,7 +900,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(12,24);
         BigDecimal cost = rate.calculate(period, CarParkKind.VISITOR);
 
-        BigDecimal result = new BigDecimal("3");
+        BigDecimal result = new BigDecimal("17.00");
         assertEquals(cost, result);
     }
 
@@ -930,7 +930,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(10,12);
         BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
 
-        BigDecimal result = new BigDecimal("5.87");
+        BigDecimal result = new BigDecimal("5.88");
         assertEquals(cost, result);
     }
 
@@ -940,7 +940,7 @@ class BrennanDiarmuidTestTask2 {
         Period period = new Period(15,19);
         BigDecimal cost = rate.calculate(period, CarParkKind.STUDENT);
 
-        BigDecimal result = new BigDecimal("9.37");
+        BigDecimal result = new BigDecimal("14.88");
         assertEquals(cost, result);
     }
 
