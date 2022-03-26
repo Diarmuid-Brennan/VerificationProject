@@ -109,8 +109,6 @@ public class Rate {
             case "STAFF":
                 iReducedCalculate = new StaffReduction();
                 break;
-            default:
-                throw new IllegalArgumentException("ERROR not found");
         }
         result = iReducedCalculate.calculateReduction(result);
         return result;
